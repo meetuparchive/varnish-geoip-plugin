@@ -1,0 +1,13 @@
+*~
+config.log
+config.status
+libtool
+src/.deps/geoip_plugin.Plo
+src/.deps/libgeoip_plugin_la-geoip_plugin.Plo
+src/Makefile
+src/config.h
+src/stamp-h1
+test/.deps/test-geoip-plugin.Po
+test/.deps/test_geoip_plugin.Po
+test/Makefile
+vcl/Makefile
