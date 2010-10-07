@@ -5,7 +5,7 @@ This package contains the source for a little library used through inline C
 in Varnish for converting IPs to country codes, primarily used for hashing
 It uses the MaxMind GeoIP library which can be obtained at
 
-http://www.maxmind.com/app/c
+[http://www.maxmind.com/app/c](http://www.maxmind.com/app/c)
 
 The site includes instructions on how to build the GeoIP library, which must
 be installed prior to using the library and inline C.
@@ -14,26 +14,26 @@ be installed prior to using the library and inline C.
 Building and testing the library
 --------------------------------
 
-To build the library, enter ./lib and run make:
+To build the library, enter `./lib` and run make:
 
-cd lib
-make
+    cd lib
+    make
 
 To test the library, run make test in the same directory:
 
-make test
+    make test
 
 This should produce an output testing a couple of IPs. If you should get the
 message
 
 Error: Could not load GeoIP plugin:
-geoip_plugin.so: cannot open shared object file: No such file or directory
+geoip\_plugin.so: cannot open shared object file: No such file or directory
 
 you have not installed the GeoIP library or it is not in your library path.
 To fix this, either install or add the GeoIP library to your library path.
 
 When you have compiled your library successfully, copy the resulting
-geoip_plugin.so to a suitable place on your filesystem.
+geoip\_plugin.so to a suitable place on your filesystem.
 
 
 Using the library in Varnish
@@ -43,7 +43,7 @@ Included in the package is the VCL required to incorporate the library in
 Varnish, found in the file plugin.vcl. Before using it, make sure you alter
 the line
 
-const char* plugin_name = "<insert full path to plugin directory>/geoip_plugin.so";
+const char* plugin\_name = "<insert full path to plugin directory>/geoip_plugin.so";
 
 to be the full path to where you installed the geoip_plugin.so.
 

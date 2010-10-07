@@ -19,7 +19,7 @@ void GeoIPRecord_delete(GeoIPRecord *gir)
 __attribute__((constructor))
 void load_module()
 {
-  const char* plugin_name = "/usr/local/lib/varnish/plugins/geoip_plugin.so";
+  const char* plugin_name = "@varnishpluginsdir@/libgeoip_plugin.so";
   void *handle = NULL;
 	
   handle = dlopen(plugin_name, RTLD_NOW);
