@@ -1,4 +1,4 @@
-varnishpluginsdir = $(libdir)/varnish/plugins
+varnishpluginsdir = $(prefix)/plugins
 
 varnishplugins_LTLIBRARIES = libgeoip_plugin.la
 
