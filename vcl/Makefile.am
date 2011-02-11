@@ -1,4 +1,4 @@
-varnishpluginsdir = $(libdir)/varnish/plugins
+varnishpluginsdir = $(prefix)/plugins
 varnishplugins_DATA = geoip_plugin.vcl
 
 CLEANFILES = $(varnishplugins_DATA)
