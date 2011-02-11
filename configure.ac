@@ -16,39 +16,39 @@ AC_CHECK_LIB([dl], [dlsym])
 AC_CHECK_HEADERS([stdlib.h stdio.h GeoIP.h GeoIPCity.h])
 
 
-AC_MSG_CHECKING([GeoIP City Data])
-if test -z "$GEOIP_CITY_DATA"
-then
-    for f in /usr/share/GeoIP /usr/local/share/GeoIP
-    do
-        if test -e "$f/GeoLiteCity.dat"
-        then
-            GEOIP_CITY_DATA="$fGeoLiteCity.dat"
-        fi
-    done
+dnl AC_MSG_CHECKING([GeoIP City Data])
+dnl if test -z "$GEOIP_CITY_DATA"
+dnl then
+dnl     for f in /usr/share/GeoIP /usr/local/share/GeoIP
+dnl     do
+dnl         if test -e "$f/GeoLiteCity.dat"
+dnl         then
+dnl             GEOIP_CITY_DATA="$fGeoLiteCity.dat"
+dnl         fi
+dnl     done
 
-    for f in /usr/share/GeoIP /usr/local/share/GeoIP
-    do
-        if test -e "$f/GeoIPCity.dat"
-        then
-            GEOIP_CITY_DATA="$fGeoIPCity.dat"
-        fi
-    done
+dnl     for f in /usr/share/GeoIP /usr/local/share/GeoIP
+dnl     do
+dnl         if test -e "$f/GeoIPCity.dat"
+dnl         then
+dnl             GEOIP_CITY_DATA="$fGeoIPCity.dat"
+dnl         fi
+dnl     done
 
-    if test -z "$GEOIP_CITY_DATA"
-    then
-        AC_MSG_ERROR([not found], [1])
-    else
-        AC_MSG_RESULT([yes])
-    fi
-else
-    if test -e "$GEOIP_CITY_DATA"
-    then
-        AC_MSG_RESULT([yes])
-    else
-        AC_MSG_ERROR([not found], [1])
-    fi
-fi
+dnl     if test -z "$GEOIP_CITY_DATA"
+dnl     then
+dnl         AC_MSG_ERROR([not found], [1])
+dnl     else
+dnl         AC_MSG_RESULT([yes])
+dnl     fi
+dnl else
+dnl     if test -e "$GEOIP_CITY_DATA"
+dnl     then
+dnl         AC_MSG_RESULT([yes])
+dnl     else
+dnl         AC_MSG_ERROR([not found], [1])
+dnl     fi
+dnl fi
 
 AC_SUBST([GEOIP_CITY_DATA], ["$GEOIP_CITY_DATA"])
 
