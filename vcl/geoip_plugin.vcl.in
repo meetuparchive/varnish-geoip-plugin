@@ -53,7 +53,7 @@ sub geocode_and_lookup {
                  gir->region ? gir->region: "",
                  gir->country_code ? gir->country_code : "",
                  gir->postal_code ? gir->postal_code : "");
-        snprintf(latlong, 100, "%f,%f", gir->latitude, gir->longitude);
+        snprintf(latlong, 50, "%f,%f", gir->latitude, gir->longitude);
 
         VRT_SetHdr(sp, HDR_REQ, "\020X-GeoIP-LatLong:", latlong, vrt_magic_string_end);
         VRT_SetHdr(sp, HDR_REQ, "\015X-GeoIP-City:", city, vrt_magic_string_end);
